@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background: #eaf6fb;
+  color: #333;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+header {
+  background: #333;
+  color: #fff;
+  padding: 1rem 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 1rem;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #f39c12;
+}
+
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+#mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: #444;
+}
+
+#mobile-menu a {
+  padding: 0.75rem 1rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo-container {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+.logo-container img {
+  max-width: 300px;
+  transition: transform 0.4s ease;
+}
+
+.logo-container img:hover {
+  transform: scale(1.1);
+}
+
+#hero {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.service-item {
+  background: #cceeff;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+section {
+  margin: 2rem 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: auto;
+}
+
+form input, form textarea {
+  padding: 0.75rem;
+  margin: 0.5rem 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 0.75rem;
+  background: #25d366;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+form button:hover {
+  background: #20b954;
+}
+
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  nav ul.desktop-menu {
+    display: none;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  #mobile-menu {
+    display: flex;
+  }
+}

@@ -200,48 +200,55 @@ footer a{
 }
 
 /* ----------------------------- */
-/* BOTÃO WHATSAPP OFICIAL (mobile) */
+/* BOTÃO WHATSAPP FLUTUANTE (desktop + mobile) */
+/* desaparece suavemente ao chegar na seção #contact */
 /* ----------------------------- */
 
 .whatsapp-float{
-  display:none; /* default hidden on desktop */
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:56px;
+  height:56px;
+  background:#25D366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 6px 18px rgba(0,0,0,.18);
+  z-index:9999;
+
+  /* transição suave para aparecer/desaparecer */
+  transition: opacity 280ms ease, transform 280ms ease;
+  opacity:1;
+  transform:scale(1);
 }
 
-/* Mobile only */
-@media (max-width:768px){
-  .whatsapp-float{
-    position:fixed;
-    bottom:18px;
-    right:18px;
-    width:56px;
-    height:56px;
-    background:#25D366;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    box-shadow:0 4px 12px rgba(0,0,0,.25);
-    z-index:9999;
-    animation:pulseWhats 1.8s infinite ease-in-out;
-    transition:transform .2s, opacity .2s;
-  }
-
-  .whatsapp-float svg{
-    width:28px;
-    height:28px;
-  }
-}
-
-/* HIDE CLASS */
-.whatsapp-hide{
+/* estado escondido */
+.whatsapp-hidden{
   opacity:0;
+  transform:scale(.8);
   pointer-events:none;
-  transform:scale(.85);
 }
 
-/* Pulse animation */
-@keyframes pulseWhats{
-  0%   { box-shadow:0 0 0 0 rgba(37,211,102,0.6); }
-  70%  { box-shadow:0 0 0 18px rgba(37,211,102,0); }
-  100% { box-shadow:0 0 0 0 rgba(37,211,102,0); }
+/* pequena interação hover */
+.whatsapp-float:hover{
+  transform:scale(1.05);
+}
+
+/* Ícone SVG ajustado */
+.whatsapp-float svg{
+  width:28px;
+  height:28px;
+  display:block;
+}
+
+/* redução em telas muito pequenas */
+@media(max-width:420px){
+  .whatsapp-float{
+    bottom:14px;
+    right:14px;
+    width:50px;
+    height:50px;
+  }
 }

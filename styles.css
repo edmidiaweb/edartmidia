@@ -10,6 +10,7 @@ body{
   font-family: Arial, sans-serif;
   background: #eaf6fb;
   color: #333;
+  line-height:1.4;
 }
 
 .container{
@@ -35,10 +36,7 @@ nav{
 nav ul{
   list-style:none;
   display:flex;
-}
-
-nav li{
-  margin-left:1rem;
+  gap:1rem;
 }
 
 nav a{
@@ -57,13 +55,13 @@ nav a:hover{
 }
 
 /* MOBILE MENU */
-#mobile-menu{
+.mobile-menu{
   display:none;
   flex-direction:column;
   background:#444;
 }
 
-#mobile-menu a{
+.mobile-menu a{
   padding:.8rem 1rem;
   color:#fff;
   text-decoration:none;
@@ -107,7 +105,7 @@ nav a:hover{
   padding:1rem;
   border-radius:8px;
   text-align:center;
-  transition:.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s;
 }
 
 .service-item:hover{
@@ -124,6 +122,7 @@ nav a:hover{
 /* BENEFÍCIOS */
 .benefits{
   list-style:none;
+  padding-left:0;
 }
 
 .benefits li{
@@ -149,6 +148,7 @@ textarea{
   margin:.5rem 0;
   border-radius:5px;
   border:1px solid #ccc;
+  font-size:1rem;
 }
 
 button{
@@ -159,6 +159,7 @@ button{
   border-radius:5px;
   cursor:pointer;
   transition:.3s;
+  font-weight:600;
 }
 
 button:hover{
@@ -174,9 +175,13 @@ footer{
   text-align:center;
 }
 
+footer a{
+  color:#fff;
+  text-decoration:underline;
+}
+
 /* RESPONSIVO */
 @media(max-width:768px){
-
   nav ul.desktop-menu{
     display:none;
   }
@@ -185,64 +190,58 @@ footer{
     display:block;
   }
 
-  #mobile-menu{
+  .mobile-menu{
     display:flex;
   }
 
+  .container{
+    width:94%;
+  }
 }
 
 /* ----------------------------- */
-/* BOTÃO WHATSAPP OFICIAL MOBILE */
+/* BOTÃO WHATSAPP OFICIAL (mobile) */
 /* ----------------------------- */
 
-.whatsapp-official{
-  display:none;
+.whatsapp-float{
+  display:none; /* default hidden on desktop */
 }
 
-@media(max-width:768px){
-
-  .whatsapp-official{
-
+/* Mobile only */
+@media (max-width:768px){
+  .whatsapp-float{
     position:fixed;
     bottom:18px;
     right:18px;
-
     width:56px;
     height:56px;
-
     background:#25D366;
     border-radius:50%;
-
     display:flex;
-    justify-content:center;
     align-items:center;
-
+    justify-content:center;
     box-shadow:0 4px 12px rgba(0,0,0,.25);
-
     z-index:9999;
-
     animation:pulseWhats 1.8s infinite ease-in-out;
+    transition:transform .2s, opacity .2s;
   }
 
-  .whatsapp-official svg{
+  .whatsapp-float svg{
     width:28px;
     height:28px;
   }
-
 }
 
-/* ESCONDER BOTÃO */
+/* HIDE CLASS */
 .whatsapp-hide{
   opacity:0;
   pointer-events:none;
   transform:scale(.85);
 }
 
-/* ANIMAÇÃO */
+/* Pulse animation */
 @keyframes pulseWhats{
-
   0%   { box-shadow:0 0 0 0 rgba(37,211,102,0.6); }
   70%  { box-shadow:0 0 0 18px rgba(37,211,102,0); }
   100% { box-shadow:0 0 0 0 rgba(37,211,102,0); }
-
 }

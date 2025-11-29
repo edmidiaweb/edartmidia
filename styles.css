@@ -1,14 +1,15 @@
-/* BASE */
+/* RESET */
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
 }
 
+/* BASE */
 body{
   font-family: Arial, sans-serif;
-  background:#eaf6fb;
-  color:#333;
+  background: #eaf6fb;
+  color: #333;
 }
 
 .container{
@@ -18,7 +19,6 @@ body{
 }
 
 /* HEADER */
-
 header{
   background:#333;
   color:#fff;
@@ -29,11 +29,12 @@ nav{
   display:flex;
   justify-content:space-between;
   align-items:center;
+  padding:0 1rem;
 }
 
 nav ul{
-  display:flex;
   list-style:none;
+  display:flex;
 }
 
 nav li{
@@ -43,6 +44,7 @@ nav li{
 nav a{
   color:#fff;
   text-decoration:none;
+  transition:.3s;
 }
 
 nav a:hover{
@@ -54,15 +56,16 @@ nav a:hover{
   cursor:pointer;
 }
 
+/* MOBILE MENU */
 #mobile-menu{
   display:none;
   flex-direction:column;
+  background:#444;
 }
 
 #mobile-menu a{
+  padding:.8rem 1rem;
   color:#fff;
-  background:#444;
-  padding:.8rem;
   text-decoration:none;
 }
 
@@ -74,12 +77,17 @@ nav a:hover{
 
 .logo-container img{
   max-width:300px;
+  transition:.3s;
+}
+
+.logo-container img:hover{
+  transform:scale(1.05);
 }
 
 /* HERO */
 #hero{
   text-align:center;
-  padding:1.5rem 0;
+  padding:2rem 0;
 }
 
 .hero-text p{
@@ -91,6 +99,7 @@ nav a:hover{
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
   gap:1rem;
+  padding:1rem 0;
 }
 
 .service-item{
@@ -108,8 +117,8 @@ nav a:hover{
 
 .price{
   display:block;
-  margin-top:.5rem;
   font-weight:bold;
+  margin-top:.5rem;
 }
 
 /* BENEFÍCIOS */
@@ -121,6 +130,11 @@ nav a:hover{
   padding:.5rem 0;
 }
 
+/* SEÇÕES */
+section{
+  margin:2rem 0;
+}
+
 /* CONTATO */
 form{
   max-width:500px;
@@ -129,7 +143,8 @@ form{
   flex-direction:column;
 }
 
-input, textarea{
+input,
+textarea{
   padding:.75rem;
   margin:.5rem 0;
   border-radius:5px;
@@ -143,6 +158,11 @@ button{
   border:none;
   border-radius:5px;
   cursor:pointer;
+  transition:.3s;
+}
+
+button:hover{
+  background:#20b954;
 }
 
 /* FOOTER */
@@ -150,8 +170,8 @@ footer{
   background:#333;
   color:#fff;
   padding:1rem;
-  text-align:center;
   margin-top:2rem;
+  text-align:center;
 }
 
 /* RESPONSIVO */
@@ -172,17 +192,16 @@ footer{
 }
 
 /* ----------------------------- */
-/* BOTÃO WHATSAPP FLUTUANTE */
-/* MOBILE APENAS + PULSE */
+/* BOTÃO WHATSAPP OFICIAL MOBILE */
 /* ----------------------------- */
 
-.whatsapp-float{
+.whatsapp-official{
   display:none;
 }
 
 @media(max-width:768px){
 
-  .whatsapp-float{
+  .whatsapp-official{
 
     position:fixed;
     bottom:18px;
@@ -191,21 +210,21 @@ footer{
     width:56px;
     height:56px;
 
-    background:#25d366;
+    background:#25D366;
     border-radius:50%;
 
     display:flex;
     justify-content:center;
     align-items:center;
 
-    box-shadow:0 0 8px rgba(0,0,0,.35);
+    box-shadow:0 4px 12px rgba(0,0,0,.25);
 
     z-index:9999;
 
-    animation:pulse 1.8s infinite;
+    animation:pulseWhats 1.8s infinite ease-in-out;
   }
 
-  .whatsapp-float svg{
+  .whatsapp-official svg{
     width:28px;
     height:28px;
   }
@@ -216,14 +235,14 @@ footer{
 .whatsapp-hide{
   opacity:0;
   pointer-events:none;
-  transform:scale(.7);
+  transform:scale(.85);
 }
 
-/* ANIMAÇÃO PULSE */
-@keyframes pulse{
+/* ANIMAÇÃO */
+@keyframes pulseWhats{
 
-  0%   { box-shadow:0 0 0 0 rgba(37,211,102,.7); }
-  70%  { box-shadow:0 0 0 20px rgba(37,211,102,0); }
+  0%   { box-shadow:0 0 0 0 rgba(37,211,102,0.6); }
+  70%  { box-shadow:0 0 0 18px rgba(37,211,102,0); }
   100% { box-shadow:0 0 0 0 rgba(37,211,102,0); }
 
 }

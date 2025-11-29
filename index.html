@@ -1,77 +1,163 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Serviços Digitais - Soluções Criativas</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ED Art&Mídia | Soluções em Tecnologia e Serviços</title>
+
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <nav>
-        <div class="menu-toggle" id="mobile-menu-toggle">Menu</div>
-        <ul class="desktop-menu">
-          <li><a href="#services">Serviços</a></li>
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#contact">Contato</a></li>
-        </ul>
-      </nav>
-      <div id="mobile-menu">
-        <a href="#services">Serviços</a>
-        <a href="#about">Sobre</a>
-        <a href="#contact">Contato</a>
-      </div>
-    </div>
-  </header>
 
-  <div class="logo-container">
-    <img src="img/logo33.png" alt="Logo Serviços Digitais">
-  </div>
+<header>
+  <div class="container">
+    <nav>
+      <div class="menu-toggle" id="mobile-menu-toggle">Menu</div>
 
-  <section id="hero">
-    <div class="container">
-      <video controls width="80%">
-        <source src="img/video.mp4" type="video/mp4">
-        Seu navegador não suporta vídeo.
-      </video>
-    </div>
-  </section>
+      <ul class="desktop-menu">
+        <li><a href="#hero">Início</a></li>
+        <li><a href="#services">Serviços</a></li>
+        <li><a href="#about">Por que escolher</a></li>
+        <li><a href="#contact">Contato</a></li>
+      </ul>
+    </nav>
 
-  <main class="container">
-    <section id="services">
-      <h2>Nossos Serviços - A partir de R$ 20,00</h2>
-      <div class="services-grid">
-        <div class="service-item"> <h3>Landing Pages</h3> <p>Páginas de conversão e vendas (A partir de R$ 150,00).</p> </div>
-        <div class="service-item"> <h3>Apresentações PPT/PDF</h3> <p>Slides profissionais e envolventes (A partir de R$ 80,00).</p> </div>
-        <div class="service-item"> <h3>Chatbot Offline</h3> <p>Automação simples para captura de leads e FAQs (A partir de R$ 150,00).</p> </div>
-        <div class="service-item"> <h3>Revisão e Formatação</h3> <p>Textos impecáveis, correção de TCCs e formatação ABNT (A partir de R$ 20,00/pág.).</p> </div>
-        <div class="service-item"> <h3>Auxílio em Trabalhos</h3> <p>Suporte e orientação na estruturação de trabalhos escolares e acadêmicos.</p> </div>
-        <div class="service-item"> <h3>Design Essencial</h3> <p>Criação de Logotipos, Cartões de Visita, Edição de Imagens e Currículos.</p> </div>
-      </div>
-    </section>
+    <div id="mobile-menu">
+      <a href="#hero">Início</a>
+      <a href="#services">Serviços</a>
+      <a href="#about">Por que escolher</a>
+      <a href="#contact">Contato</a>
+    </div>
+  </div>
+</header>
 
-    <section id="about">
-      <h2>Sobre Nós</h2>
-      <p>Somos especialistas em serviços digitais com foco em inovação e soluções criativas.</p>
-    </section>
+<div class="logo-container">
+  <!-- LOGO ORIGINAL -->
+  <img src="img/logo33.png" alt="ED Art&Mídia"/>
+</div>
 
-    <section id="contact">
-      <h2>Contato</h2>
-      <p>Fale com a gente via WhatsApp para um orçamento sem compromisso:</p>
-      <form id="contactForm">
-        <input type="text" id="nome" placeholder="Seu nome completo" required>
-        <input type="email" id="email" placeholder="Seu e-mail" required>
-        <textarea id="mensagem" placeholder="Qual serviço você precisa?" required></textarea>
-        <button type="submit">Enviar via WhatsApp</button>
-      </form>
-    </section>
-  </main>
+<section id="hero">
+  <div class="container hero-text">
+    <h1>Dê um UP no seu negócio e nos seus projetos!</h1>
+    <p>
+      Precisa de presença online, materiais profissionais ou ajuda acadêmica de qualidade?<br><br>
+      <strong>Eu transformo suas ideias em resultados!</strong> ✨
+    </p>
 
-  <footer>
-    <p>&copy; 2025 ED Art&Mídia - edartmidia@gmail.com</p>
-  </footer>
+    <br>
 
-  <script src="script.js"></script>
+    <!-- VIDEO ORIGINAL -->
+    <video controls width="80%">
+      <source src="img/video.mp4" type="video/mp4" />
+      Seu navegador não suporta vídeo.
+    </video>
+  </div>
+</section>
+
+<br><br>
+
+<main class="container">
+
+  <section id="services">
+    <h2>📌 Meus Serviços</h2>
+
+    <div class="services-grid">
+
+      <div class="service-item">
+        <h3>Landing Pages</h3>
+        <p>Páginas de conversão focadas em resultados.</p>
+        <span class="price">A partir de R$ 150,00</span>
+      </div>
+
+      <div class="service-item">
+        <h3>Apresentações (PPT/PDF)</h3>
+        <p>Slides profissionais para aulas, vendas e reuniões.</p>
+        <span class="price">A partir de R$ 80,00</span>
+      </div>
+
+      <div class="service-item">
+        <h3>Chatbot Offline</h3>
+        <p>Automação simples para perguntas frequentes e captação de leads.</p>
+        <span class="price">A partir de R$ 150,00</span>
+      </div>
+
+      <div class="service-item">
+        <h3>Revisão de Textos</h3>
+        <p>Correção completa dos seus conteúdos.</p>
+        <span class="price">R$ 20,00 / página</span>
+      </div>
+
+      <div class="service-item">
+        <h3>Auxílio em Trabalhos Acadêmicos</h3>
+        <p>TCC, trabalhos escolares e formatação ABNT.</p>
+        <span class="price">Sob consulta</span>
+      </div>
+
+      <div class="service-item">
+        <h3>Trabalho também com</h3>
+        <p>Logotipos, QR codes, Edição de vídeo e imagem e webscraping.</p>
+        <span class="price">Sob consulta</span>
+      </div>
+
+    </div>
+  </section>
+
+  <br><br>
+
+  <section id="about">
+    <h2>⭐ Por que escolher meus serviços?</h2>
+
+    <ul class="benefits">
+      <li>💰 Preços acessíveis</li>
+      <li>⚡ Entregas rápidas + qualidade</li>
+      <li>🧩 Soluções completas</li>
+    </ul>
+
+  </section>
+
+  <br><br>
+
+  <section id="contact">
+    <h2>📲 Entre em contato agora</h2>
+
+    <p>
+      Envie uma mensagem ou peça seu orçamento detalhado:
+    </p>
+
+    <form id="contactForm">
+      <input type="text" id="nome" placeholder="Seu nome" required />
+      <input type="email" id="email" placeholder="Seu e-mail" required />
+      <textarea id="mensagem" placeholder="Descreva o serviço desejado" required></textarea>
+
+      <button type="submit">
+        Enviar via WhatsApp
+      </button>
+    </form>
+
+  </section>
+
+</main>
+
+<footer>
+  <p>&copy; 2025 ED Art&Mídia • edartmidia@gmail.com</p>
+</footer>
+
+<!-- BOTÃO FLUTUANTE WHATSAPP -->
+<a 
+  id="whatsappFloat"
+  class="whatsapp-float"
+  href="https://api.whatsapp.com/send?phone=5513996305218&text=Ol%C3%A1!%20Gostaria%20de%20um%20or%C3%A7amento%20%F0%9F%98%8A"
+  target="_blank"
+  aria-label="Chamar no WhatsApp"
+>
+
+  <!-- ÍCONE SVG OFICIAL -->
+  <svg viewBox="0 0 32 32">
+    <path fill="white" d="M19.11 17.64c-.27-.14-1.6-.78-1.85-.87-.25-.09-.43-.14-.6.14-.18.27-.69.87-.85 1.05-.16.18-.31.2-.58.07-.27-.14-1.13-.42-2.15-1.35-.8-.71-1.34-1.59-1.5-1.86-.16-.27-.02-.42.12-.55.12-.12.27-.31.4-.46.13-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.6-1.45-.83-1.99-.22-.54-.45-.47-.6-.48h-.52c-.18 0-.48.07-.73.34-.25.27-.96.94-.96 2.29 0 1.35.99 2.66 1.13 2.84.14.18 1.94 2.95 4.7 4.14.66.28 1.17.45 1.57.57.66.21 1.27.18 1.75.11.53-.08 1.6-.66 1.83-1.3.23-.64.23-1.18.16-1.3-.07-.12-.25-.2-.52-.34z"/>
+    <path fill="white" d="M16.01 3C9.39 3 4 8.39 4 15.01c0 2.64.87 5.07 2.34 7.03L4 29l7.22-2.25c1.89 1.03 4.05 1.63 6.79 1.63 6.62 0 12-5.39 12-12.01S22.63 3 16.01 3zm0 21.73c-2.41 0-4.64-.7-6.52-2.01l-.46-.29-4.29 1.34 1.39-4.18-.3-.48c-1.31-1.89-1.99-4.11-1.99-6.45 0-6.17 5-11.17 11.17-11.17S27.18 10.5 27.18 16.67 22.18 24.73 16.01 24.73z"/>
+  </svg>
+</a>
+
+<script src="script.js"></script>
 </body>
 </html>

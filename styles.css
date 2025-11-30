@@ -1,254 +1,317 @@
+/* ============================= */
 /* RESET */
+/* ============================= */
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+/* ============================= */
 /* BASE */
+/* ============================= */
 body{
   font-family: Arial, sans-serif;
   background: #eaf6fb;
   color: #333;
-  line-height:1.4;
 }
 
 .container{
-  width:90%;
-  max-width:1200px;
-  margin:auto;
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
 
+/* ============================= */
 /* HEADER */
+/* ============================= */
 header{
-  background:#333;
-  color:#fff;
-  padding:1rem 0;
+  background: #333;
+  padding: 1rem 0;
 }
 
 nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav ul{
-  list-style:none;
-  display:flex;
-  gap:1rem;
+  display: flex;
+  list-style: none;
+}
+
+nav li{
+  margin-left: 1rem;
 }
 
 nav a{
-  color:#fff;
-  text-decoration:none;
-  transition:.3s;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: .2s;
 }
 
 nav a:hover{
-  color:#f39c12;
+  color: #f39c12;
 }
 
+/* MENU MOBILE */
 .menu-toggle{
-  display:none;
-  cursor:pointer;
+  display: none;
+  cursor: pointer;
+  color: #fff;
 }
 
-/* MOBILE MENU */
-.mobile-menu{
-  display:none;
-  flex-direction:column;
-  background:#444;
+#mobile-menu{
+  display: none;
+  flex-direction: column;
+  background: #444;
 }
 
-.mobile-menu a{
-  padding:.8rem 1rem;
-  color:#fff;
-  text-decoration:none;
+#mobile-menu a{
+  padding: .8rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  border-top: 1px solid rgba(255,255,255,.08);
 }
 
+/* ============================= */
 /* LOGO */
+/* ============================= */
 .logo-container{
-  text-align:center;
-  margin:1rem 0;
+  text-align: center;
+  margin: 1rem 0;
 }
 
 .logo-container img{
-  max-width:300px;
-  transition:.3s;
+  max-width: 300px;
+  transition: transform .3s ease;
 }
 
 .logo-container img:hover{
-  transform:scale(1.05);
+  transform: scale(1.05);
 }
 
+/* ============================= */
 /* HERO */
+/* ============================= */
 #hero{
-  text-align:center;
-  padding:2rem 0;
+  text-align: center;
+  padding: 2rem 0;
 }
 
 .hero-text p{
-  margin:1rem 0;
+  margin: 1rem 0;
+  line-height: 1.6;
 }
 
+.hero-text video{
+  width: 80%;
+  max-width: 700px;
+  border-radius: 12px;
+}
+
+/* ============================= */
 /* SERVIÇOS */
+/* ============================= */
 .services-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
-  gap:1rem;
-  padding:1rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.service-link{
+  text-decoration: none;
+  color: inherit;
+  display: block;
 }
 
 .service-item{
-  background:#cceeff;
-  padding:1rem;
-  border-radius:8px;
-  text-align:center;
-  transition: transform 0.3s ease, box-shadow 0.3s;
+  background: #cceeff;
+  border-radius: 12px;
+  padding: 1.2rem;
+  text-align: center;
+  transition: .3s ease;
 }
 
 .service-item:hover{
-  transform:translateY(-5px);
-  box-shadow:0 0 10px rgba(0,0,0,.2);
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,.15);
+}
+
+.service-item h3{
+  margin-bottom: .3rem;
+}
+
+.service-item p{
+  font-size: .92rem;
 }
 
 .price{
-  display:block;
-  font-weight:bold;
-  margin-top:.5rem;
+  display: block;
+  margin-top: .5rem;
+  font-weight: bold;
 }
 
-/* BENEFÍCIOS */
+/* ============================= */
+/* ABOUT */
+/* ============================= */
 .benefits{
-  list-style:none;
-  padding-left:0;
+  list-style: none;
 }
 
 .benefits li{
-  padding:.5rem 0;
+  padding: .4rem 0;
 }
 
-/* SEÇÕES */
+/* ============================= */
+/* SECTIONS */
+/* ============================= */
 section{
-  margin:2rem 0;
+  margin: 2rem 0;
 }
 
-/* CONTATO */
+/* ============================= */
+/* FORM */
+/* ============================= */
 form{
-  max-width:500px;
-  margin:auto;
-  display:flex;
-  flex-direction:column;
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 
 input,
 textarea{
-  padding:.75rem;
-  margin:.5rem 0;
-  border-radius:5px;
-  border:1px solid #ccc;
-  font-size:1rem;
+  margin: .5rem 0;
+  padding: .75rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+
+textarea{
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus{
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(37,211,102,.25);
+  border-color: #25d366;
 }
 
 button{
-  background:#25d366;
-  color:#fff;
-  padding:.75rem;
-  border:none;
-  border-radius:5px;
-  cursor:pointer;
-  transition:.3s;
-  font-weight:600;
+  background: #25d366;
+  color: #fff;
+  padding: .8rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .2s ease;
 }
 
 button:hover{
-  background:#20b954;
+  background: #20b954;
 }
 
+/* ============================= */
 /* FOOTER */
+/* ============================= */
 footer{
-  background:#333;
-  color:#fff;
-  padding:1rem;
-  margin-top:2rem;
-  text-align:center;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: .9rem;
 }
 
 footer a{
-  color:#fff;
-  text-decoration:underline;
+  color: #25d366;
+  text-decoration: none;
 }
 
+/* ============================= */
 /* RESPONSIVO */
+/* ============================= */
 @media(max-width:768px){
+
   nav ul.desktop-menu{
-    display:none;
+    display: none;
   }
 
   .menu-toggle{
-    display:block;
+    display: block;
   }
 
-  .mobile-menu{
-    display:flex;
+  #mobile-menu{
+    display: flex;
   }
 
-  .container{
-    width:94%;
+  .hero-text video{
+    width: 100%;
   }
 }
 
-/* ----------------------------- */
-/* BOTÃO WHATSAPP FLUTUANTE (desktop + mobile) */
-/* desaparece suavemente ao chegar na seção #contact */
-/* ----------------------------- */
+/* BOTÃO WHATSAPP */
+.whatsapp-official{
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
 
-.whatsapp-float{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  width:56px;
-  height:56px;
-  background:#25D366;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 6px 18px rgba(0,0,0,.18);
-  z-index:9999;
+  width: 56px;
+  height: 56px;
 
-  /* transição suave para aparecer/desaparecer */
-  transition: opacity 280ms ease, transform 280ms ease;
-  opacity:1;
-  transform:scale(1);
+  background: #25D366; /* cor oficial do WhatsApp */
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  box-shadow: 0 4px 12px rgba(0,0,0,.3);
+
+  z-index: 9999;
+  transition: opacity .28s ease, transform .28s ease;
+  /* pulse opcional */
+  animation: pulse 1.8s infinite;
 }
 
-/* estado escondido */
-.whatsapp-hidden{
-  opacity:0;
-  transform:scale(.8);
-  pointer-events:none;
-}
-
-/* pequena interação hover */
-.whatsapp-float:hover{
-  transform:scale(1.05);
-}
-
-/* Ícone SVG ajustado */
-.whatsapp-float svg{
-  width:28px;
-  height:28px;
+.whatsapp-official svg{
+  width: 26px;
+  height: 26px;
   display:block;
 }
 
-/* redução em telas muito pequenas */
-@media(max-width:420px){
-  .whatsapp-float{
-    bottom:14px;
-    right:14px;
-    width:50px;
-    height:50px;
-  }
+.whatsapp-hide{
+  opacity: 0;
+  transform: scale(.85);
+  pointer-events: none;
 }
+
+/* pulse */
+@keyframes pulse{
+  0%{ box-shadow: 0 0 0 0 rgba(37,211,102,.6); }
+  70%{ box-shadow: 0 0 0 16px rgba(37,211,102,0); }
+  100%{ box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+
+/* ----------------------------- */
+/* BLOCO OUTROS SERVIÇOS */
+/* ----------------------------- */
+
+.other-services {
+  margin-top: 3rem;
+  padding: 2.5rem 0;
+  background:#f3fbff;
+}
+
+.other-services h2{
+  text-align:center;
+  margin-bottom:1.5rem;
+}
+

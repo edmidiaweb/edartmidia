@@ -42,52 +42,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // WHATSAPP FLOAT: hide smoothly when #contact is in view
   const whatsappBtn = document.getElementById("whatsappFloat");
-  const contactSection = document.getElementById("contact");
+const contactSection = document.getElementById("contact");
+if (whatsappBtn && contactSection) {
+  const observer = ("IntersectionObserver" in window)
+    ? new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) whatsappBtn.classList.add("whatsapp-hide");
+          else whatsappBtn.classList.remove("whatsapp-hide");
+        });
+      }, { root: null, rootMargin: '0px 0px -120px 0px', threshold: 0 })
+    : null;
 
-  if (!whatsappBtn || !contactSection) return; // nothing to do if missing
-
-  const HIDE_CLASS = "whatsapp-hidden";
-  const OFFSET_PX = 120; // hide when contact top is within viewport minus this offset
-
-  // Fallback check function (used if IntersectionObserver not available)
-  const checkByBounding = () => {
-    const rect = contactSection.getBoundingClientRect();
-    const vh = window.innerHeight || document.documentElement.clientHeight;
-    if (rect.top < vh - OFFSET_PX) {
-      // contact is visible (or near) -> hide button
-      whatsappBtn.classList.add(HIDE_CLASS);
-    } else {
-      whatsappBtn.classList.remove(HIDE_CLASS);
-    }
-  };
-
-  if ("IntersectionObserver" in window) {
-    // observe when top of contact intersects viewport
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        // if contact is intersecting the viewport (even a little), hide button
-        if (entry.isIntersecting) {
-          whatsappBtn.classList.add(HIDE_CLASS);
-        } else {
-          whatsappBtn.classList.remove(HIDE_CLASS);
-        }
-      });
-    }, {
-      root: null,
-      rootMargin: `0px 0px -${OFFSET_PX}px 0px`, // shrink bottom so hide earlier
-      threshold: 0
-    });
-
-    observer.observe(contactSection);
-
-    // Also run fallback once to set initial state
-    checkByBounding();
-
-  } else {
-    // Fallback: on scroll/resize check bounding rect
-    checkByBounding();
-    window.addEventListener("scroll", checkByBounding, { passive: true });
-    window.addEventListener("resize", checkByBounding);
+  if (observer) observer.observe(contactSection);
+  else {
+    const check = () => {
+      const rect = contactSection.getBoundingClientRect();
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      if (rect.top < vh - 120) whatsappBtn.classList.add("whatsapp-hide");
+      else whatsappBtn.classList.remove("whatsapp-hide");
+    };
+    check();
+    window.addEventListener("scroll", check, { passive: true });
+    window.addEventListener("resize", check);
   }
-
-});
+}

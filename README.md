@@ -1,116 +1,139 @@
-ED Art&Mídia – Soluções em Tecnologia & Serviços
+🚀 ED Art&Mídia — Landing Page Profissional
 
-Website institucional da ED Art&Mídia, desenvolvido para divulgação de serviços digitais, atendimento via WhatsApp e apresentação profissional de portfólio.
+Projeto de site institucional da ED Art&Mídia, desenvolvido para apresentar serviços de design, tecnologia e suporte acadêmico com foco em conversão de vendas.
+
+A página foi construída com conceitos de copywriting, prova social, gatilhos mentais e UX, visando transformar visitantes em contatos reais via WhatsApp.
+
+🎯 Objetivo do Projeto
+
+Criar uma presença digital simples, rápida e eficaz para:
+
+✅ Divulgar serviços profissionais
+✅ Construir autoridade e confiança
+✅ Facilitar o contato direto com clientes
+✅ Gerar conversões através de CTAs estratégicos
+
+🛠️ Tecnologias Utilizadas
+
+HTML5 – Estrutura da página
+
+CSS3 – Layout responsivo e identidade visual
+
+JavaScript – Interações móveis e envio de mensagens
+
+SVG – Ícone personalizado do WhatsApp
+
+Hospedagem estática – Ideal para GitHub Pages
+
+O projeto não utiliza frameworks — é totalmente leve, rápido e compatível com qualquer servidor estático.
+
+📂 Estrutura do Projeto
+/
+├── index.html              # Página principal
+├── styles.css              # Arquivo de estilos
+├── script.js               # Scripts de interação
+├── /services
+│   ├── landing-pages.html
+│   ├── apresentacoes.html
+│   ├── chatbot.html
+│   ├── revisao-textos.html
+│   └── trabalhos-academicos.html
+└── /img
+    ├── logo33.png
+    ├── edson.jpg
+    └── video.mp4
 
 ✨ Funcionalidades
 
-✅ Design responsivo (desktop e mobile)
-✅ Menu mobile com abertura/fechamento
-✅ Seção de serviços com cards
-✅ Formulário de contato com envio direto para WhatsApp
-✅ Botão flutuante oficial do WhatsApp:
+✔️ Menu responsivo (desktop e mobile)
+✔️ Botão flutuante oficial do WhatsApp
+✔️ Formulário de contato integrado ao WhatsApp
+✔️ Seção “Quem está por trás da ED Art&Mídia”
+✔️ Gatilhos de urgência e autoridade
+✔️ Cards de serviços com navegação interna
+✔️ Layout moderno, leve e adaptado para celulares
 
-Mobile only
+🧠 Estratégia de Conversão
 
-Ícone SVG original
+Este projeto aplica técnicas reais de:
 
-Animação “pulse”
+Copywriting (textos orientados à ação)
 
-Auto-ocultação ao chegar na seção “Contato”
-✅ Rodapé com ano automático
+Humanização da marca (seção do fundador)
 
-🧰 Tecnologias Utilizadas
+Gatilhos mentais:
 
-HTML5 – Estrutura do site
+Urgência (“agenda quase cheia”)
 
-CSS3 – Estilização responsiva
+Autoridade (especialista por trás do serviço)
 
-JavaScript –
+Segurança (“ajustes até aprovação”)
 
-Menu mobile
+CTAs de alta conversão focados em WhatsApp
 
-Integração com WhatsApp
+▶️ Como Executar Localmente
 
-Ocultação inteligente do botão flutuante
+Clone o projeto:
 
-Atualização automática do ano no rodapé
-
-📁 Estrutura do Projeto
-/
-├── index.html        # Página principal
-├── styles.css        # Estilos globais
-├── script.js         # Lógica JavaScript
-├── img/
-│   ├── logo33.png    # Logotipo
-│   └── video.mp4    # Vídeo de apresentação
-└── README.md         # Documentação do projeto
-
-🚀 Como Rodar Localmente
-
-Clone o repositório:
-
-git clone https://github.com/SEU_USUARIO/NOME_DO_REPO.git
+git clone https://github.com/seu-usuario/ed-art-midia-landing-page.git
 
 
 Acesse a pasta:
 
-cd NOME_DO_REPO
+cd ed-art-midia-landing-page
 
 
-Abra o arquivo index.html no navegador:
+Abra diretamente no navegador:
 
-start index.html
-
-
-✅ Não é necessário servidor — o projeto roda direto no navegador.
-
-🌐 Publicação via GitHub Pages
-
-Abra seu repositório no GitHub
-
-Vá em:
-
-Settings → Pages
+index.html
 
 
-Configure:
+Não há dependências, instalação ou build. É só abrir.
 
-Branch: main
+🌐 Publicação no GitHub Pages
 
-Folder: /root
+Vá em Settings do repositório
 
-Clique em Save
+Clique em Pages
 
-Após alguns segundos, seu site estará disponível em:
+Selecione a branch main
 
-https://SEU_USUARIO.github.io/NOME_DO_REPO/
+Defina a pasta raiz /
 
-🛠️ Manutenção / Atualizações
+Salve
 
-Sempre que alterar qualquer arquivo:
+Em poucos segundos sua página estará online:
 
-git add .
-git commit -m "Atualização do site"
-git push
+https://seu-usuario.github.io/ed-art-midia-landing-page/
 
+📈 Próximos Passos do Projeto
 
-Depois:
+Inserir depoimentos reais
 
-✅ Aguarde 1–3 minutos
-✅ Atualize o navegador com:
+Criar portfólio visual (antes/depois)
 
-CTRL + F5
+Implementar animações sutis (AOS)
 
+Desenvolver painel admin para edição de conteúdo
 
-ou teste em aba anônima.
+Integrar rastreamento de conversão (Meta Pixel / Google Tag)
 
-📲 Contato
+👨‍💻 Autor
 
-📧 Email: edartmidia@gmail.com
+Edson — ED Art&Mídia
+Designer e Desenvolvedor focado em ajudar pequenos negócios a aumentarem suas vendas através de presença digital profissional e acessível.
 
-📱 WhatsApp: https://wa.me/5513996305218
+📧 E-mail: edartmidia@gmail.com
 
-🔒 Licença
+📲 WhatsApp: (13) 99630-5218
 
-Este projeto é de uso exclusivo da ED Art&Mídia.
-É proibida a revenda, clonagem ou redistribuição sem autorização prévia.
+📄 Licença
+
+Este projeto está sob a licença MIT.
+Você pode utilizá-lo como base para estudos ou projetos, mantendo os créditos ao autor.
+
+⭐ Agradecimento
+
+Se este projeto te inspirar ou ajudar em algo, deixe uma ⭐ no repositório!
+
+🔥 ED Art&Mídia — Comunicação profissional que gera resultados reais.

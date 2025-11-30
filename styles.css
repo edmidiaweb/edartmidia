@@ -222,6 +222,7 @@ button:hover{
 /* FOOTER */
 /* ============================= */
 footer{
+  width: 100%;
   background: #333;
   color: #fff;
   text-align: center;
@@ -229,6 +230,7 @@ footer{
   margin-top: 2rem;
   font-size: .9rem;
 }
+
 
 footer a{
   color: #25d366;
